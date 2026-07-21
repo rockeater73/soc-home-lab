@@ -26,7 +26,7 @@ The lab is being built incrementally so I can understand what each component doe
 ## Current Status
 
 - [x] Created Windows 11 virtual machine
-- [ ] Installed and configured Sysmon
+- [x] Installed and configured Sysmon
 - [ ] Installed Splunk Enterprise
 - [ ] Ingested Sysmon logs
 - [ ] Ran attack simulations
