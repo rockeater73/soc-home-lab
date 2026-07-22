@@ -4,7 +4,7 @@
 
 This project documents my process of building a small Security Operations Center (SOC) home lab using Windows 11, Sysmon, and Splunk. The goal is to understand how endpoint telemetry is collected, forwarded, analyzed, and used to detect suspicious activity.
 
----
+
 
 ## Technologies
 
@@ -15,7 +15,7 @@ This project documents my process of building a small Security Operations Center
 - Splunk Universal Forwarder
 - Atomic Red Team *(planned)*
 
----
+
 
 ## Lab Architecture
 
@@ -38,8 +38,6 @@ Splunk Enterprise
 Detection & Investigation
 ```
 
----
-
 ## Current Progress
 
 - [x] Windows 11 VM deployed
@@ -52,23 +50,12 @@ Detection & Investigation
 - [ ] Atomic Red Team simulations
 - [ ] Investigation reports
 
----
-
 ## Repository Structure
 
-docs/
-Detailed setup guides and troubleshooting documentation.
-
-detections/
-SPL detection queries and MITRE ATT&CK mappings.
-
-reports/
-Incident investigation writeups.
-
-screenshots/
-Supporting screenshots from the lab.
-
----
+- **docs/** – Setup guides and troubleshooting documentation
+- **detections/** – SPL detection queries and MITRE ATT&CK mappings
+- **reports/** – Investigation writeups
+- **screenshots/** – Supporting screenshots from the lab
 
 ## Next Steps
 
