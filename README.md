@@ -4,8 +4,6 @@
 
 This project documents my process of building a small Security Operations Center (SOC) home lab using Windows 11, Sysmon, and Splunk. The goal is to understand how endpoint telemetry is collected, forwarded, analyzed, and used to detect suspicious activity.
 
-Rather than following tutorials blindly, this lab focuses on understanding how each component works, troubleshooting issues, and documenting the process as if working in a real SOC environment.
-
 ---
 
 ## Technologies
