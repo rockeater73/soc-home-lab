@@ -42,15 +42,15 @@ Detection & Investigation
 
 ## Current Progress
 
-[x] Windows 11 VM deployed
-[x] Sysmon installed and configured
-[x] Splunk Enterprise deployed
-[x] Universal Forwarder configured
-[x] Sysmon logs successfully ingested into Splunk
-[x] Diagnosed and resolved Windows Event Log permission issue
-[] Building SPL detections
-[] Atomic Red Team simulations
-[] Investigation reports
+- [x] Windows 11 VM deployed
+- [x] Sysmon installed and configured
+- [x] Splunk Enterprise deployed
+- [x] Universal Forwarder configured
+- [x] Sysmon logs successfully ingested into Splunk
+- [x] Diagnosed and resolved Windows Event Log permission issue
+- [] Building SPL detections
+- [] Atomic Red Team simulations
+- [] Investigation reports
 
 ---
 
