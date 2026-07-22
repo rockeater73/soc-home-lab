@@ -1,34 +1,89 @@
 # SOC Home Lab
 
-## Project Goal
+## Project Overview
 
-Build a small security monitoring environment that collects Windows endpoint telemetry, detects suspicious activity, and documents investigations using Sysmon and Splunk.
+This project documents my process of building a small Security Operations Center (SOC) home lab using Windows 11, Sysmon, and Splunk. The goal is to understand how endpoint telemetry is collected, forwarded, analyzed, and used to detect suspicious activity.
 
-The lab is being built incrementally so I can understand what each component does, why it is used, and how the resulting data supports SOC investigations.
+Rather than following tutorials blindly, this lab focuses on understanding how each component works, troubleshooting issues, and documenting the process as if working in a real SOC environment.
 
-## Planned Environment
+---
 
-- Windows 11 Pro virtual machine
+## Technologies
+
+- Windows 11 Pro
 - Oracle VirtualBox
 - Sysmon
 - Splunk Enterprise
-- Atomic Red Team
+- Splunk Universal Forwarder
+- Atomic Red Team *(planned)*
 
-## Objectives
+---
 
-- Collect detailed Windows endpoint logs
-- Analyze process, network, file, and registry activity
-- Write SPL searches for suspicious behavior
+## Lab Architecture
+
+```text
+Windows Activity
+        │
+        ▼
+     Sysmon
+        │
+        ▼
+Windows Event Log
+        │
+        ▼
+Splunk Universal Forwarder
+        │
+        ▼
+Splunk Enterprise
+        │
+        ▼
+Detection & Investigation
+```
+
+---
+
+## Current Progress
+
+[x] Windows 11 VM deployed
+[x] Sysmon installed and configured
+[x] Splunk Enterprise deployed
+[x] Universal Forwarder configured
+[x] Sysmon logs successfully ingested into Splunk
+[x] Diagnosed and resolved Windows Event Log permission issue
+[] Building SPL detections
+[] Atomic Red Team simulations
+[] Investigation reports
+
+---
+
+## Repository Structure
+
+```
+docs/
+```
+Detailed setup guides and troubleshooting documentation.
+
+```
+detections/
+```
+SPL detection queries and MITRE ATT&CK mappings.
+
+```
+reports/
+```
+Incident investigation writeups.
+
+```
+screenshots/
+```
+Supporting screenshots from the lab.
+
+---
+
+## Next Steps
+
+- Install the Splunk Add-on for Sysmon
+- Write SPL detection queries
+- Simulate attacks using Atomic Red Team
+- Document investigations
 - Map detections to MITRE ATT&CK
-- Document investigation findings and false positives
-- Build a repeatable portfolio project
-
-## Current Status
-
-- [x] Created Windows 11 virtual machine
-- [x] Installed and configured Sysmon
-- [ ] Installed Splunk Enterprise
-- [ ] Ingested Sysmon logs
-- [ ] Ran attack simulations
-- [ ] Created detection queries
-- [ ] Published investigation reports
