@@ -56,24 +56,16 @@ Detection & Investigation
 
 ## Repository Structure
 
-```
 docs/
-```
 Detailed setup guides and troubleshooting documentation.
 
-```
 detections/
-```
 SPL detection queries and MITRE ATT&CK mappings.
 
-```
 reports/
-```
 Incident investigation writeups.
 
-```
 screenshots/
-```
 Supporting screenshots from the lab.
 
 ---
