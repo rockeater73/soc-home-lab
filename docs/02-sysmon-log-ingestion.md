@@ -25,11 +25,22 @@ Splunk Enterprise acts as the SIEM by storing and indexing those events so they 
 - Verified the configuration was loaded
 
 ## Troubleshooting
-he forwarder connected to Splunk right away, but I wasn't seeing any Sysmon events.
-After checking Splunk's internal logs, I found an access denied error when the forwarder tried to read the Sysmon event log.
-The issue ended up being the account the SplunkForwarder service was running under. After changing the service to run as local system and restarting it, the events started showing up in Splunk.
+
+The forwarder connected to Splunk right away, but I wasn't seeing any Sysmon events.
+
+I first verified that the Universal Forwarder was connected and that the inputs configuration had loaded correctly. Since everything appeared to be configured properly, I checked Splunk's internal logs and found an "Access Denied" error when the forwarder attempted to read the Sysmon Operational event log.
+
+The issue ended up being the account the SplunkForwarder service was running under. After changing the service to run as Local System and restarting the service, Sysmon events immediately began appearing in Splunk.
+
+### SplunkForwarder Service Configuration
+
+After identifying the permission issue, I determined that the SplunkForwarder service account did not have permission to read the Sysmon Operational event log. Changing the service to run as the **Local System** account resolved the issue and allowed Sysmon events to be forwarded to Splunk.
+
+![SplunkForwarder Local System](../screenshots/02-Splunk-Forwarder-Local-Permissions.png)
 
 ## What I Learned
-- The difference between Splunk Enterprise and the Universal Forwarder
-- How Sysmon logs move from Windows into Splunk
-- How Windows service permissions can affect log collection
+- A successful forwarder connection does not necessarily mean data is being ingested.
+- Windows service permissions can prevent event log collection even when Splunk appears healthy.
+- Troubleshooting should begin by verifying each stage of the telemetry pipeline instead of assuming the configuration is wrong.
+- Separating the responsibilities of Sysmon, Windows Event Log, Universal Forwarder, and Splunk Enterprise made it much easier to isolate problems.
+
