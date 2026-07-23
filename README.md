@@ -2,8 +2,9 @@
 
 ## Project Overview
 
-This project documents my process of building a small Security Operations Center (SOC) home lab using Windows 11, Sysmon, and Splunk. The goal is to understand how endpoint telemetry is collected, forwarded, analyzed, and used to detect suspicious activity.
+This project documents the creation of a small Security Operations Center (SOC) home lab using Windows 11, Sysmon, and Splunk Enterprise. The objective is to collect endpoint telemetry, investigate Windows activity, develop SPL detections, and simulate adversary behavior using Atomic Red Team.
 
+The lab is designed to mirror a basic SOC workflow by collecting logs, reducing telemetry noise, investigating process activity, and documenting findings.
 
 
 ## Technologies
@@ -38,7 +39,28 @@ Splunk Enterprise
 Detection & Investigation
 ```
 
-## Current Progress
+## Investigation Workflow
+Collect Telemetry
+        │
+        ▼
+Assess Data Quality
+        │
+        ▼
+Reduce System Noise
+        │
+        ▼
+Investigate Process Activity
+        │
+        ▼
+Develop Detection Logic
+        │
+        ▼
+Validate Detection
+        │
+        ▼
+Document Findings
+
+## Completed Components
 
 - [x] Windows 11 VM deployed
 - [x] Sysmon installed and configured
@@ -46,6 +68,8 @@ Detection & Investigation
 - [x] Universal Forwarder configured
 - [x] Sysmon logs successfully ingested into Splunk
 - [x] Diagnosed and resolved Windows Event Log permission issue
+- [x] Set-up the Splunk addon for Sysmon
+- [x] Identified and filtered Splunk service account noise
 - [ ] Building SPL detections
 - [ ] Atomic Red Team simulations
 - [ ] Investigation reports
@@ -53,13 +77,11 @@ Detection & Investigation
 ## Repository Structure
 
 - **docs/** – Setup guides and troubleshooting documentation
-- **detections/** – SPL detection queries and MITRE ATT&CK mappings
+- **SPL detection rules with explanation and MITRE ATT&CK mapping** – SPL detection queries and MITRE ATT&CK mappings
 - **reports/** – Investigation writeups
 - **screenshots/** – Supporting screenshots from the lab
 
 ## Next Steps
-
-- Install the Splunk Add-on for Sysmon
 - Write SPL detection queries
 - Simulate attacks using Atomic Red Team
 - Document investigations
