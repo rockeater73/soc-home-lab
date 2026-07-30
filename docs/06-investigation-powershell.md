@@ -19,6 +19,8 @@ One common technique involves using Base64 encoded commands to obscure the true 
 ## Atomic Test
 
 An Atomic Red Team PowerShell test was executed to generate encoded PowerShell activity.
+<img width="1005" height="429" alt="image" src="https://github.com/user-attachments/assets/69104e47-ff87-4e9a-80e9-03c295de05b2" />
+
 
 ## Expected Behavior
 
@@ -55,6 +57,8 @@ Observed command-line indicators included:
 - -e
 - -enc
 - Encoded PowerShell commands
+<img width="896" height="555" alt="image" src="https://github.com/user-attachments/assets/3d1d2932-347c-40f7-b9f8-74828c25cc88" />
+
 
 ### Analysis
 
@@ -68,6 +72,10 @@ Key factors reviewed included:
 - User account
 - Command line arguments
 - Execution context
+<img width="604" height="222" alt="image" src="https://github.com/user-attachments/assets/35eb7323-6b69-42df-854b-e9a055b01dd6" />
+
+
+
 
 ## Findings
 
