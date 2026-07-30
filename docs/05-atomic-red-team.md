@@ -60,6 +60,8 @@ Before executing a test:
 ### T1059.001 - PowerShell
 
 Used to simulate encoded PowerShell execution.
+<img width="1005" height="429" alt="image" src="https://github.com/user-attachments/assets/e62e4855-0344-45e2-b44d-16140fa49590" />
+
 
 ### T1105 - Ingress Tool Transfer
 
