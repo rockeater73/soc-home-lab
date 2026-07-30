@@ -64,6 +64,8 @@ Used to simulate encoded PowerShell execution.
 ### T1105 - Ingress Tool Transfer
 
 Used to simulate file download activity using certutil.
+<img width="1007" height="485" alt="image" src="https://github.com/user-attachments/assets/7865464a-36ae-4ab9-a223-b560d9870020" />
+
 
 ## Benefits
 
